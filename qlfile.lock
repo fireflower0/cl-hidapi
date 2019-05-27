@@ -1,0 +1,12 @@
+("quicklisp" .
+ (:class qlot.source.ql:source-ql-all
+  :initargs (:distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "2019-05-21"))
+("cffi" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "cffi" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))
+("alexandria" .
+ (:class qlot.source.ql:source-ql
+  :initargs (:project-name "alexandria" :distribution "http://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "ql-2019-05-21"))

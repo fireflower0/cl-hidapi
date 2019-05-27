@@ -22,3 +22,9 @@ hidapiのインストール
 make
 sudo make install
 ```
+
+Common Lisp ライブラリインストール
+
+```
+qlot install
+```
