@@ -23,9 +23,11 @@
            :hid-last-error))
 (in-package :cl-hidapi/lib-hidapi)
 
+(push #P"/usr/local/lib/" *foreign-library-directories*)
+
 (define-foreign-library hidapi
-  (:unix (:or "/usr/local/lib/libhidapi-libusb.so"
-              "/usr/local/lib/libhidapi-hidraw.so")))
+  (:unix (:or "libhidapi-libusb.so"
+              "libhidapi-hidraw.so")))
 
 (use-foreign-library hidapi)
 

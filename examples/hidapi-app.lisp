@@ -22,12 +22,12 @@
 (defun device-list-views ()
   (let ((devices (get-device-list)))
     (loop for device in devices
-          do (format t
-                     "Device found~%  type: ~4,'0x ~4,'0x~%  path: ~s~%  serial number ~s~%"
-                     (getf device :vendor-id)
-                     (getf device :product-id)
-                     (getf device :path)
-                     (getf device :serial-number))
-             (format t "  Manufacturer: ~s~%" (getf device :manufacturer))
-             (format t "  Product: ~s~%" (getf device :product))
-         (terpri))))
+       do (format t "product_id:       ~4,'0x~%" (getf device :product-id))
+          (format t "serial_number:    ~s~%"     (getf device :serial-number))
+          (format t "manufacturer:     ~s~%"     (getf device :manufacturer))
+          (format t "usage:            ~a~%"     (getf device :usage))
+          (format t "interface_number: ~a~%"     (getf device :interface-number))
+          (format t "product:          ~s~%"     (getf device :product))
+          (format t "vendor_id:        ~4,'0x~%" (getf device :vendor-id))
+          (format t "release_number:   ~a~%"     (getf device :release-number))
+          (terpri))))
